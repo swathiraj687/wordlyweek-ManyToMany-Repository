@@ -53,7 +53,7 @@ public class WriterController {
     }
 
     @GetMapping("/writers/{writerId}/magazines")
-    public Magazine getWriterMagazines(@PathVariable("writerId") int writerId) {
+    public List<Magazine> getWriterMagazines(@PathVariable("writerId") int writerId) {
         return writerJpaService.getWriterMagazines(writerId);
     }
 }
