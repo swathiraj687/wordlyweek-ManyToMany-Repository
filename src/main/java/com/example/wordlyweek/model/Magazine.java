@@ -22,6 +22,7 @@ import java.util.ArrayList;
 @Table(name = "magazine")
 public class Magazine {
     @Id
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int magazineId;
     @Column(name = "title")
