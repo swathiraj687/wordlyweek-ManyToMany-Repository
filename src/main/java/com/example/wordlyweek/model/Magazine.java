@@ -14,6 +14,7 @@ package com.example.wordlyweek.model;
 import java.util.List;
 
 import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.ArrayList;
 
@@ -28,6 +29,7 @@ public class Magazine {
     @Column(name = "publicationdate")
     private String publicationDate;
     @ManyToMany(mappedBy = "magazines")
+    @JsonIgnoreProperties("magazines")
     private List<Writer> writers = new ArrayList<>();
 
     public Magazine(int magazineId, String magazineName, String publicationDate, List<Writer> writers) {
