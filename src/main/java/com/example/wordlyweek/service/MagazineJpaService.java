@@ -20,6 +20,7 @@ import com.example.wordlyweek.repository.MagazineRepository;
 import com.example.wordlyweek.repository.MagazineJpaRepository;
 import com.example.wordlyweek.repository.WriterJpaRepository;
 
+import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.HttpStatus;
@@ -27,7 +28,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Service
 public class MagazineJpaService implements MagazineRepository {
     @Autowired
     private MagazineJpaRepository magazineJpaRepository;
