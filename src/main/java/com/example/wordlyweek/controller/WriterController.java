@@ -32,17 +32,17 @@ public class WriterController {
         return writerJpaService.getWriters();
     }
 
-    @GetMapping("magazines/writers/{writerId}")
+    @GetMapping("/magazines/writers/{writerId}")
     public Writer getWriterById(@PathVariable("writerId") int writerId) {
         return writerJpaService.getWriterById(writerId);
     }
 
-    @PostMapping("magazines/writers")
+    @PostMapping("/magazines/writers")
     public Writer addWriter(@RequestBody Writer writer) {
         return writerJpaService.addWriter(writer);
     }
 
-    @PutMapping("magazines/writers/{writerId}")
+    @PutMapping("/magazines/writers/{writerId}")
     public Writer updateWriter(@PathVariable("writerId") int writerId, @RequestBody Writer writer) {
         return writerJpaService.updateWriter(writerId, writer);
     }
