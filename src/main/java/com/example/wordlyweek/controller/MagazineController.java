@@ -49,17 +49,17 @@ public class MagazineController {
         return magazineJpaService.addMagazine(magazine);
     }
 
-    @PutMapping("magazines/{magazineId}")
+    @PutMapping("/magazines/{magazineId}")
     public Magazine updateMagazine(@PathVariable("magazineId") int magazineId, @RequestBody Magazine magazine) {
         return magazineJpaService.updateMagazine(magazineId, magazine);
     }
 
-    @DeleteMapping("magazines/{magazineId}")
+    @DeleteMapping("/magazines/{magazineId}")
     public void deleteMagazine(@PathVariable("magazineId") int magazineId) {
         magazineJpaService.deleteMagazine(magazineId);
     }
 
-    @GetMapping("magazines/{magazineId}/writers")
+    @GetMapping("/magazines/{magazineId}/writers")
     public List<Writer> getMagazineWriters(@PathVariable("magazineId") int magazineId) {
         return magazineJpaService.getMagazineWriters(magazineId);
     }
